@@ -46,7 +46,7 @@ import { useMouseMove } from 'react-use-mouse-move';
 
 const TestHook = (props) => {
   const pos1 = useMouseMove(1);
-  const pos2 = useMouseMove(2, 'client');
+  const pos2 = useMouseMove(2, 'page');
   const pos3 = useMouseMove(5, 'client');
   const pos4 = useMouseMove(10, 'client', 'myDiv');
 
