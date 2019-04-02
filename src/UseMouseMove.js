@@ -1,20 +1,16 @@
 import { useEffect, useState, useMemo } from 'react';
 
 function useMouseMove(throttle, targetPos, targetId) {
-  const [pos, setPos] = useState({x: 0, y: 0});
-  let prevPos;
+  const [pos, setPos] = useState({ x: 0, y: 0 });
+  let prevPos = pos;
 
   throttle = useMemo(() => Math.max(1, Math.min(throttle, 10)), [throttle]);
 
   const throttlePos = (prevPos, x, y) => {
-    if (prevPos) {
-      return {
-        x: Math.abs(prevPos.x - x) % throttle === 0 ? x : prevPos.x,
-        y: Math.abs(prevPos.y - y) % throttle === 0 ? y : prevPos.y
-      };
-    }
-
-    return { x, y };
+    return {
+      x: Math.abs(prevPos.x - x) % throttle === 0 ? x : prevPos.x,
+      y: Math.abs(prevPos.y - y) % throttle === 0 ? y : prevPos.y
+    };
   }
 
   const moveHandler = (evt) => {
