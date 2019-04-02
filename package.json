@@ -1,6 +1,6 @@
 {
   "name": "react-use-mouse-move",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Custom react hook to capture mouse move events, with throttling and ability to target individual element or window",
   "main": "index.js",
   "scripts": {
