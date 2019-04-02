@@ -1,0 +1,34 @@
+{
+  "name": "react-use-mouse-move",
+  "version": "1.0.2",
+  "description": "Custom react hook to capture mouse move events, with throttling and ability to target individual element or window",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamfz/react-use-mouse-move.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "react",
+    "hooks",
+    "mouse",
+    "move",
+    "use",
+    "mouse",
+    "move"
+  ],
+  "author": "hamfz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hamfz/react-use-mouse-move/issues"
+  },
+  "homepage": "https://github.com/hamfz/react-use-mouse-move#readme",
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "devDependencies": {}
+}
