@@ -11,6 +11,8 @@ $ npm install react-use-mouse-move
 
 Provides a reusable custom React hook for tracking mouse movement either by attaching to the window or a targetted element ID.
 
+![Example usage](https://raw.githubusercontent.com/hamfz/react-use-mouse-move/master/mouse_move.gif)
+
 ### Usage
 Hook expects
 ```js
@@ -18,10 +20,10 @@ Hook expects
 ```
 
 - throttle: integer 1 - 10 that controls how often the hook "updates" the given position. Limiting this can be helpful for performance reasons.
-- targetPos: string representing what x, y coordinate you want from the event, ex: ['page', 'screen', 'offset', 'client', '']. By default returns x and y. (See: https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent)
-- targetId: string representing target ID of element you wish to track. (Default/no argument is window)
+- targetPos: string representing what x, y coordinate you want from the event, ex: `['page', 'screen', 'offset', 'client', '']`. By default returns x and y. (See: https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent)
+- targetId: string representing target ID of element you wish to track. (Defaults to window)
 
-Additionally, the returned object also includes the following keyDown states: ['altKey', 'ctrlKey', 'metaKey', 'shiftKey']. Below is the full object returned from an mouse move update.
+Additionally, the returned object also includes the following keyDown states: `['altKey', 'ctrlKey', 'metaKey', 'shiftKey']`. Below is the full object returned from an mouse move update.
 ```js
    {
       x,
@@ -50,15 +52,15 @@ const TestHook = (props) => {
 
   return (
     <div id="myDiv">
-      <h2>Throttle = 1 (or no throttle)</h2>
+      <h2>Throttle 1 (or no throttle)</h2>
       <span>x: {pos1.x} y: {pos1.y}</span>
       <br/>
-      <h2>Throttle = 2</h2>
+      <h2>Throttle 2</h2>
       <span>x: {pos2.x} y: {pos2.y}</span>
       <br/>
-      <h2>Throttle = 5</h2>
+      <h2>Throttle 5</h2>
       <span>x: {pos3.x} y: {pos3.y}</span>
-      <h2>Throttle = 10 (max)</h2>
+      <h2>Throttle 10 (max)</h2>
       <span>x: {pos4.x} y: {pos4.y}</span>
     </div>
   );
